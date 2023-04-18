@@ -9,19 +9,14 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.List;
 
-@Document(collection = "questions")
+@Document(collection = "quizes")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class Question {
-    private class QuestionString {
-        private String text;
-    }
-
     @Id
     private ObjectId _id;
-    private String questionId;
-    private QuestionString question;
+    private String question;
     private String category;
     private String correctAnswer;
     private List<String> incorrectAnswers;
@@ -29,4 +24,5 @@ public class Question {
     private String type;
     private String difficulty;
     private Boolean isNiche;
+    private List<String> regions;
 }

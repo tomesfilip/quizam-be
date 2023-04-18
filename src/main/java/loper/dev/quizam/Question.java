@@ -16,6 +16,7 @@ import java.util.List;
 public class Question {
     @Id
     private ObjectId _id;
+    private String id;
     private String question;
     private String category;
     private String correctAnswer;

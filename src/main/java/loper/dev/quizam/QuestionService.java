@@ -12,7 +12,6 @@ public class QuestionService {
     @Autowired
     private QuestionRepository questionRepository;
     public List<Question> allQuestions() {
-        System.out.println(questionRepository.findAll().toString());
         return questionRepository.findAll();
 
     }
